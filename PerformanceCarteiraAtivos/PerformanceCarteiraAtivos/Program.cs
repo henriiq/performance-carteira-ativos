@@ -1,4 +1,5 @@
 ﻿using PerformanceCarteiraAtivos.Rentabilidade;
+using PerformanceCarteiraAtivos.Rentabilidade.ImportarArquivo;
 using PerformanceCarteiraAtivos.Rentabilidade.Infra.Repositorios;
 using System;
 
@@ -8,6 +9,9 @@ namespace PerformanceCarteiraAtivos
     {
         static void Main(string[] args)
         {
+            new Importador().Importar("COTAHIST_A2021.TXT");
+
+
             Investidor investidor;
             var id = Guid.NewGuid();
 
@@ -44,9 +48,9 @@ namespace PerformanceCarteiraAtivos
                 investidor = repo.Obtem(id);
             }
 
-            Console.WriteLine($"BPAC11:---------{investidor.CalcularRentabilidadeInvestimentoPorAcao("BPAC11", DateTime.Now.AddDays(-1), DateTime.Now)}");
-            Console.WriteLine($"BRKM5:----------{investidor.CalcularRentabilidadeInvestimentoPorAcao("BRKM5", DateTime.Now.AddDays(-1), DateTime.Now)}");
-            Console.WriteLine($"RENTABILIDADE:--{investidor.CalcularRentabilidadeInvestimento(DateTime.Now.AddDays(-1), DateTime.Now)}");
+            Console.WriteLine($"BPAC11:-------------> {investidor.CalcularRentabilidadeInvestimentoPorAcao("BPAC11", DateTime.Now.AddDays(-1), DateTime.Now)}");
+            Console.WriteLine($"BRKM5:--------------> {investidor.CalcularRentabilidadeInvestimentoPorAcao("BRKM5", DateTime.Now.AddDays(-1), DateTime.Now)}");
+            Console.WriteLine($"RENTABILIDADE:------> {investidor.CalcularRentabilidadeInvestimento(DateTime.Now.AddDays(-1), DateTime.Now)}");
             Console.ReadKey();
         }
     }
