@@ -40,7 +40,7 @@ namespace PerformanceCarteiraAtivos.Rentabilidade.ImportarArquivo
             new ArquivoCotacao {NomeCampo = "QUATOT - QUANTIDADE TOTAL DE TÍTULOS NEGOCIADOS NESTE PAPEL- MERCADO", Tipo = "N", Tamanho = 18, PosicaoInicial = 153, PosicaoFinal = 170},
             new ArquivoCotacao {NomeCampo = "VOLTOT - VOLUME TOTAL DE TÍTULOS NEGOCIADOS NESTE PAPEL- MERCADO", Tipo = "V99", Tamanho = 16, PosicaoInicial = 171, PosicaoFinal = 188},
             new ArquivoCotacao {NomeCampo = "PREEXE - PREÇO DE EXERCÍCIO PARA O MERCADO DE OPÇÕES OU VALOR DO CONTRATO PARA O MERCADO DE TERMO SECUNDÁRIO", Tipo = "V99", Tamanho = 11, PosicaoInicial = 189, PosicaoFinal = 201},
-            new ArquivoCotacao {NomeCampo = "NDOPC - INDICADOR DE CORREÇÃO DE PREÇOS DE EXERCÍCIOS OU VALORES DE CONTRATO PARA OS MERCADOS DE OPÇÕES OU TERMO SECUNDÁRIO", Tipo = "N", Tamanho = 1, PosicaoInicial = 202, PosicaoFinal = 202},
+            new ArquivoCotacao {NomeCampo = "NDOPC  - INDICADOR DE CORREÇÃO DE PREÇOS DE EXERCÍCIOS OU VALORES DE CONTRATO PARA OS MERCADOS DE OPÇÕES OU TERMO SECUNDÁRIO", Tipo = "N", Tamanho = 1, PosicaoInicial = 202, PosicaoFinal = 202},
             new ArquivoCotacao {NomeCampo = "DATVEN - DATA DO VENCIMENTO PARA OS MERCADOS DE OPÇÕES OU TERMO SECUNDÁRIO", Tipo = "N", Tamanho = 8, PosicaoInicial = 203, PosicaoFinal = 210},
             new ArquivoCotacao {NomeCampo = "FATCOT - FATOR DE COTAÇÃO DO PAPEL", Tipo = "N", Tamanho = 7, PosicaoInicial = 211, PosicaoFinal = 217},
             new ArquivoCotacao {NomeCampo = "PTOEXE - PREÇO DE EXERCÍCIO EM PONTOS PARA OPÇÕES REFERENCIADAS EM DÓLAR OU VALOR DE CONTRATO EM PONTOS PARA TERMO SECUNDÁRIO", Tipo = "V06", Tamanho = 7, PosicaoInicial = 218, PosicaoFinal = 230},
