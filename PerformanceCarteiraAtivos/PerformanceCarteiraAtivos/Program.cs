@@ -9,7 +9,7 @@ namespace PerformanceCarteiraAtivos
     {
         static void Main(string[] args)
         {
-            new Importador().Importar("COTAHIST_A2021.TXT");
+            //new Importador().Importar("COTAHIST_D07062021.TXT");
 
 
             Investidor investidor;
@@ -48,6 +48,7 @@ namespace PerformanceCarteiraAtivos
                 investidor = repo.Obtem(id);
             }
 
+            Console.WriteLine(DateTime.Now.AddDays(-1) + "-------------------" + DateTime.Now.AddDays(-1));
             Console.WriteLine($"BPAC11:-------------> {investidor.CalcularRentabilidadeInvestimentoPorAcao("BPAC11", DateTime.Now.AddDays(-1), DateTime.Now)}");
             Console.WriteLine($"BRKM5:--------------> {investidor.CalcularRentabilidadeInvestimentoPorAcao("BRKM5", DateTime.Now.AddDays(-1), DateTime.Now)}");
             Console.WriteLine($"RENTABILIDADE:------> {investidor.CalcularRentabilidadeInvestimento(DateTime.Now.AddDays(-1), DateTime.Now)}");

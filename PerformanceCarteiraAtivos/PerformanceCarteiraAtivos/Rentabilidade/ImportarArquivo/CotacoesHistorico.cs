@@ -20,9 +20,9 @@ namespace PerformanceCarteiraAtivos.Rentabilidade.ImportarArquivo
 #pragma warning disable S1104 // Fields should not have public accessibility
         public static IEnumerable<ArquivoCotacao> LayoutCorpo = new[]
         {
-            new ArquivoCotacao {NomeCampo = "TIPREG - TIPO DE REGISTRO", Tipo = "N", Tamanho = 2, PosicaoInicial =1, PosicaoFinal = 2},
-            new ArquivoCotacao {NomeCampo = "DATA DO PREGÃO", Tipo = "N", Tamanho = 8, PosicaoInicial =3, PosicaoFinal = 10},
-            new ArquivoCotacao {NomeCampo = "CODBDI - CÓDIGO BDI", Tipo = "X", Tamanho = 2, PosicaoInicial =11, PosicaoFinal = 12},
+            new ArquivoCotacao {NomeCampo = "TIPREG - TIPO DE REGISTRO", Tipo = "N", Tamanho = 2, PosicaoInicial = 1, PosicaoFinal = 2},
+            new ArquivoCotacao {NomeCampo = "DATA DO PREGÃO", Tipo = "N", Tamanho = 8, PosicaoInicial = 3, PosicaoFinal = 10},
+            new ArquivoCotacao {NomeCampo = "CODBDI - CÓDIGO BDI", Tipo = "X", Tamanho = 2, PosicaoInicial = 11, PosicaoFinal = 12},
             new ArquivoCotacao {NomeCampo = "CODNEG - CÓDIGO DE NEGOCIAÇÃO DO PAPEL", Tipo = "X", Tamanho = 12, PosicaoInicial =13, PosicaoFinal = 24},
             new ArquivoCotacao {NomeCampo = "TPMERC - TIPO DE MERCADO", Tipo = "N", Tamanho = 3, PosicaoInicial =25, PosicaoFinal = 27},
             new ArquivoCotacao {NomeCampo = "NOMRES - NOME RESUMIDO DA EMPRESA EMISSORA DO PAPEL", Tipo = "X", Tamanho = 12, PosicaoInicial =28, PosicaoFinal = 39},
@@ -79,7 +79,7 @@ namespace PerformanceCarteiraAtivos.Rentabilidade.ImportarArquivo
                 var dicBody = new Dictionary<string, string>();
 
                 foreach (var h in LayoutArquivoCotacaoHistorico.LayoutCorpo)
-                    dicBody.Add(h.NomeCampo, c.Substring(h.PosicaoInicial - 1, h.Tamanho));
+                    dicBody.Add(h.NomeCampo, c.Substring(h.PosicaoInicial - 1, h.PosicaoFinal - h.PosicaoInicial + 1));
 
                 dicBodys.Add(dicBody);
             }
